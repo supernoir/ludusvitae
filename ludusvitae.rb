@@ -1,6 +1,32 @@
 # LUDUS VITAE 0.0.I
 # rubynettes (c) 2016
 
+# WHAT ARE VARIABLES I WOULD NEED?
+
+is_alive = false
+position = 0
+generation = 0
+cells = []
+random = rand(100)
+
+
+def startGame
+system("clear")
+end
+startGame
+
+def board
+    for i in 1..10 do
+ 
+        for i in 1..10 do
+        print rand(2).to_s + " "
+        end
+        puts "\n"
+    end
+end
+
+board
+
 # Write down the rules!
 #   Any live cell with fewer than two live neighbours dies, as if caused by under-population.
 #   Any live cell with two or three live neighbours lives on to the next generation.
@@ -16,12 +42,7 @@
 ## - check alive / dead status
 ## - update variables
 
-# WHAT ARE VARIABLES I WOULD NEED?
 
-is_alive = false
-position = 0
-generation = 0
-cells = []
 
 # Create a current board and a next board
 
