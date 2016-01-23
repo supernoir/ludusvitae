@@ -7,25 +7,45 @@ is_alive = false
 position = 0
 generation = 0
 cells = []
-random = rand(100)
+cell = 0
 
-
-def startGame
-system("clear")
+class STARTGAME
+    system("clear")
 end
-startGame
 
-def board
-    for i in 1..10 do
- 
-        for i in 1..10 do
-        print rand(2).to_s + " "
-        end
-        puts "\n"
+STARTGAME.new
+
+def board (cells,cell)
+    for i in 1..100 do
+            cell = rand(2)
+            if cell == 1
+            cell = "■"
+            else
+            cell = "□"
+            end
+            cells.push(cell)
     end
 end
 
-board
+board(cells,cell)
+
+
+def boardPrinter (cells)
+i = 0
+    while (i < 10) do
+        print cells[i] + " "
+        i += 1
+        end
+    print "\n"
+end
+boardPrinter(cells)
+
+
+puts cells[23]
+puts cells[99]
+puts cells.size
+
+
 
 # Write down the rules!
 #   Any live cell with fewer than two live neighbours dies, as if caused by under-population.
@@ -47,20 +67,5 @@ board
 # Create a current board and a next board
 
 # Visualize the board in CLI -- hell yeah
-
-
-
-
-
-
-
-
-
-
-
-
-
-# class currentBoard end
-# new.currentBoard
 
 
